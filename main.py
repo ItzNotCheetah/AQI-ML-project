@@ -18,7 +18,7 @@ X = aq_data[aq_features]
 y = aq_data['AQI Value']
 
 # Splitting the data into training and validation sets
-train_X, val_X, train_y, val_y = train_test_split(X,y, random_state = 0)
+train_X, val_X, train_y, val_y = train_test_split(X,y, test_size = 0.2, random_state = 0)
 
 aq_forest_model = RandomForestRegressor(random_state= 1)
 aq_forest_model.fit(train_X, train_y)
